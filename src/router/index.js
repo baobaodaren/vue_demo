@@ -1,16 +1,44 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import HelloWorld from '@/components/HelloWorld'
+import homeV from '../pages/homeV.vue'
+import releaseV from '../pages/releaseV.vue'
+import messageV from '../pages/messageV.vue'
+import myV from '../pages/myV.vue'
+import listV from '../pages/list.vue'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
+  router:[
+    { path:'/home',
+      name: 'home',
+      component:homeV ,
+      meta: { tabAuth: true },
+      children:[
+        {
+          path:'*',//home下的所有都指向listV
+          component:listV,
+          meta: { listAuth: true }//相当于标记，当我们使用$route对象时，遍历出我们标记过的
+        }
+      ]
+    },
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
+      path:'/release',
+      name: 'release',
+      component: releaseV,
+      meta: { tabAuth: true }
+    },
+    { path:'/message',
+      name: 'message',
+      component: messageV,
+      meta: { tabAuth: true }
+    },
+    { path:'/my',
+      name: 'my',
+      component: myV,
+      meta: { tabAuth: true },
+    },
+    { path:'/',redirect:'/home' },    //重定向
   ]
 })
