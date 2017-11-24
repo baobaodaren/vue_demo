@@ -1,5 +1,4 @@
 import * as types from '../types'
-/* eslint-disable */
 
 const state = {
   leftPopup: false// 是否打开登录表单

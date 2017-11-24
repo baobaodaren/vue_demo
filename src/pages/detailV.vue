@@ -58,9 +58,9 @@
             topic_id:this.detailParams.id
           };
           this.api.collectTopic(params).then((res) => {
-            if(res.data.success){
-              this.showSnackbar('收藏成功！');
-            }
+             if(res.data.success){
+               this.showSnackbar('收藏成功！');
+             }
           }).catch((err) => {
             console.log(err);
           })

@@ -3,7 +3,8 @@
     loading
   </div>
 </template>
-<<script>
+
+<script>
   export default {
     data(){
       return{
@@ -11,6 +12,7 @@
     }
   }
 </script>
+
 <style scoped>
   div{
     font-size:40px;

@@ -7,10 +7,13 @@ import messageV from '../pages/messageV.vue'
 import myV from '../pages/myV.vue'
 import listV from '../pages/list.vue'
 
-Vue.use(Router)
+Vue.use(Router);
+
+
 
 export default new Router({
-  router:[
+  // mode:'history',
+  routes: [
     { path:'/home',
       name: 'home',
       component:homeV ,
@@ -41,4 +44,11 @@ export default new Router({
     },
     { path:'/',redirect:'/home' },    //重定向
   ]
+  // scrollBehavior (to, from, savedPosition) {
+  //   if (savedPosition) {
+  //     return savedPosition
+  //   } else {
+  //     return { x: 0, y: 0 }
+  //   }
+  // }
 })

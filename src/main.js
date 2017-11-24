@@ -23,13 +23,11 @@ Vue.use(openform);
 Vue.prototype.api = API;
 Vue.config.productionTip = false;
 
-
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  store,
   router,
+  store,  //全局使用store
   template: '<App/>',
   components: { App }
-})
+});

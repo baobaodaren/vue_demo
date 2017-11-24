@@ -1,6 +1,6 @@
 import API from '../../lib/API'
 import * as types from '../types'
-/* eslint-disable */
+
 //因为每一个module都拥有vuex的5个属性
 
 //state设置默认的初始状态
